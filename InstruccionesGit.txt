@@ -1,0 +1,68 @@
+# Para iniciar un proyecto:
+
+1. Creamos un repositorio desde nuestra cuenta en github
+
+2. Iniciamos un git en la terminal en la carpeta donde
+estará nuestro proyecto:
+
+Ejemplo:
+
+	git init
+
+Nota: Debemos de dar de alta nuestro Username y password
+de github desde la terminal para poder hacer push al pro-
+yecto; esto se hace con:
+
+	git config --global user.name "John Doe"
+	git config --global user.email johndoe@example.com
+
+
+3. En este punto suponemos que dentro de la carpeta del
+proyecto ya se encuentran los archivos que vamos a usar,
+por lo tanto agregamos todo lo que este en dicha carpeta
+con:
+
+	git add .
+
+4. Hacemos el commit con un mensaje que haga referencia a
+la modificación que hayas hecho
+
+	git commit -m 'Hice un cambio'
+
+5. Vinculamos nuestro proyecto con el repositorio que creamos
+en el paso 1:
+
+
+	git remote add origin https://github.com/Username/Repositorio.git
+
+6. Ahora enviamos los cambios que efectuamos en el paso
+4) con:
+
+	git push origin master
+
+
+
+# Ahora en nuestra cuenta de github hay que agregar a nuestros colaboradores
+
+# Para tener una copia del proyecto basta con lo siguiente:
+
+	git clone https://github.com/Username/Repositorio.git
+
+# Una vez que se definen los colaboradores ellos deben de sincronizar sus modificaciones con los demás haciendo pull al proyecto:
+
+	git pull
+
+# A veces primero se necesita hacer primero el push, algo así:
+
+	git add .
+	git commit -m 'cambio'
+	git push origin master
+
+
+# Ejemplo #
+
+git remote add origin https://github.com/KennyYahir/gpproject.git
+git add .
+git commit -m 'cambio #x'
+git push -u origin master
+git pull
